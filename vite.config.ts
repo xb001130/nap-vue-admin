@@ -7,6 +7,7 @@ import Unocss from 'unocss/vite'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   resolve: {
@@ -24,9 +25,11 @@ export default defineConfig({
         '@vueuse/core',
       ],
       dts: 'types/auto-imports.d.ts',
+      resolvers: [ElementPlusResolver()],
     }),
     Components({
       dts: 'types/components.d.ts',
+      resolvers: [ElementPlusResolver()],
     }),
     Unocss(),
     VueDevTools(),
