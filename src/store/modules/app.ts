@@ -22,10 +22,13 @@ export const useAppStore = defineStore('nap-app', () => {
     })
   }
 
+  const collapsed = ref(false)
+
   return {
     projectName,
     themeColor,
     setupThemeColor,
+    collapsed,
   }
 })
 

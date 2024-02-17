@@ -9,11 +9,23 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import presetRemToPx from '@unocss/preset-rem-to-px'
 
 export default defineConfig({
+  theme: {
+    colors: {
+      primary: 'var(--el-color-primary)',
+      info: 'var(--el-color-info)',
+      success: 'var(--el-color-success)',
+      warning: 'var(--el-color-warning)',
+      danger: 'var(--el-color-danger)',
+      error: 'var(--el-color-error)',
+    },
+  },
   shortcuts: [
     ['wh-full', 'w-full h-full'],
     ['auto-bg', 'bg-white dark:bg-dark'],
+    ['auto-text', 'dark:color-white color-gray-800'],
     ['flex-center', 'flex items-center justify-center'],
     ['flex-between', 'flex items-center justify-between'],
   ],
@@ -28,10 +40,7 @@ export default defineConfig({
         'vertical-align': 'text-bottom',
       },
       collections: {
-        nap: FileSystemIconLoader(
-          './src/assets',
-          svg => svg.replace(/#FFF/, 'currentColor'),
-        ),
+        nap: FileSystemIconLoader('./src/assets'),
       },
     }),
     presetTypography(),
@@ -42,6 +51,7 @@ export default defineConfig({
         mono: 'DM Mono',
       },
     }),
+    presetRemToPx({ baseFontSize: 4 }),
   ],
   transformers: [
     transformerDirectives(),

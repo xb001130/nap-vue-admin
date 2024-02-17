@@ -1,11 +1,11 @@
 import type { App } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import routes from './routes'
+import baseRoutes from './baseRoutes'
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: (routes as RouteRecordRaw[]),
+  routes: (baseRoutes as RouteRecordRaw[]),
 })
 
 export function setupRouter(app: App<Element>) {
