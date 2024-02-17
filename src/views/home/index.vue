@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const { t } = useI18n()
 </script>
 
 <template>
-  <div mb10 flex-center flex-col>
-    <div font-size-5>
-      {{ t('home.desc') }}
-    </div>
-  </div>
+  <el-button type="primary">
+    Primary
+  </el-button>
+  <el-button type="primary" plain>
+    Primary
+  </el-button>
 </template>
 
 <style scoped>
