@@ -20,6 +20,7 @@ export default defineConfig({
       warning: 'var(--el-color-warning)',
       danger: 'var(--el-color-danger)',
       error: 'var(--el-color-error)',
+      border: 'var(--el-border-color)',
     },
   },
   shortcuts: [
