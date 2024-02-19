@@ -1,9 +1,10 @@
 import type { App } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import baseRoutes from './baseRoutes'
+import { baseRoutes } from './routes/baseRoutes'
 
-const router = createRouter({
+/** 初始化路由 */
+export const router = createRouter({
   history: createWebHistory(),
   routes: (baseRoutes as RouteRecordRaw[]),
 })

@@ -26,7 +26,7 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.vue",
-    "types/**/*.d.ts"
+    "types/*.d.ts"
   ],
-  "exclude": ["dist", "node_modules", "cypress"]
+  "exclude": ["dist", "node_modules"]
 }
