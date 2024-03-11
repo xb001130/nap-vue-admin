@@ -5,12 +5,10 @@ onMounted(() => {
 
 <template>
   <div relative wh-full>
-    <div class="box" />
+    <div />
   </div>
 </template>
 
 <style scoped>
-.box{
 
-}
 </style>

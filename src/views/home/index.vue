@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useRouterStoreHook } from '~/store/modules/router'
+
+useRouterStoreHook().getAsyncRouter()
 </script>
 
 <template>

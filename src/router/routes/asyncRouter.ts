@@ -6,6 +6,7 @@ export const asyncRouter: Array<RouteRecordRaw> = [
       {
         path: '/setnotice',
         component: '/setnotice/index',
+        name: 'Setnotice',
         meta: {
           title: '通知管理',
         },
